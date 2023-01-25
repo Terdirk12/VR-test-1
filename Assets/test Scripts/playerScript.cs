@@ -35,6 +35,7 @@ public class playerScript : MonoBehaviour
 
         if (playerDead || playerWon)
         {
+            cooldownTimer = Time.deltaTime;
             if (cooldownTimer >= timeoutTime)
             {
                 if (SteamVR_Actions.default_GrabPinch.GetState(SteamVR_Input_Sources.Any))
