@@ -9,13 +9,14 @@ public class evilCauldron : MonoBehaviour
 
     void Start()
     {    
-        Player.playerWon = true;
+        
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Projectile")
         {
+            Player.playerWon = true;
             winMenu.toggleWinMenuOn();
             Destroy(this.gameObject);
         }

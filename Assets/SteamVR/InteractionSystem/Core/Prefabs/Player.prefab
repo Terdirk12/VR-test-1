@@ -564,12 +564,16 @@ MonoBehaviour:
   audioSource: {fileID: 82000013955136614}
   audioClip: {fileID: 8300000, guid: 625f06e49dbd21444a9ccbd06034c3f8, type: 3}
   volumeScale: 1.5
+  timeoutTime: 3
+  cooldownTimer: 0
   deathMenu: {fileID: 3692714639368176091}
   winMenu: {fileID: 6528316077638952266}
   player: {fileID: 11465950}
   buttonAPress:
     actionPath: 
     needsReinit: 1
+  playerWon: 0
+  playerDead: 0
 --- !u!1 &125964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press the A button to restart
+  m_Text: Press the trigger to restart
 --- !u!1 &3170028858155918756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,10 +3216,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3223,4 +3227,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press the A button to restart
+  m_Text: Press the trigger to restart
