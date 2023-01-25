@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     public float shootingSpeed = 100f;
     public ParticleSystem muzzleFlash;
 
-    float timer;
+    float timer = 0.1f;
     private Animator animator;
     private Interactable interactable;
     public AudioSource audioSource;

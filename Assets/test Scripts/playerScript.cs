@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -15,6 +15,7 @@ public class playerScript : MonoBehaviour
     public WinMenu winMenu;
     public Player player;
     public SteamVR_Action_Boolean buttonAPress;
+    public bool playerWon, playerDead;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +28,16 @@ public class playerScript : MonoBehaviour
     {
         if(playerHealth <= 0)
         {
-            deathMenu.toggleDeathMenuOn();
-
-            if (SteamVR_Actions.default_PressingButtonA.GetState(SteamVR_Input_Sources.Any))
-            {
-                winMenu.toggleWinMenuOff();
-                deathMenu.toggleDeathMenuOff();
-                playerHealth = 3;    
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                Destroy(player.gameObject);
-            }
+            deathMenu.toggleDeathMenuOn();    
+        }
+       
+        if (SteamVR_Actions.default_PressingButtonA.GetState(SteamVR_Input_Sources.Any) && (playerDead || playerWon))
+        {
+            winMenu.toggleWinMenuOff();
+            deathMenu.toggleDeathMenuOff();
+            playerHealth = 3;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Destroy(player.gameObject);
         }
     }
 
@@ -44,7 +45,7 @@ public class playerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Projectile")
         {
-            playerHealth -= 1;
+            playerHealth--;
             audioSource.PlayOneShot(audioClip, volumeScale);
         }
     }

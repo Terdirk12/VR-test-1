@@ -568,8 +568,8 @@ MonoBehaviour:
   winMenu: {fileID: 6528316077638952266}
   player: {fileID: 11465950}
   buttonAPress:
-    actionPath: /actions/default/in/PressingButtonA
-    needsReinit: 0
+    actionPath: 
+    needsReinit: 1
 --- !u!1 &125964
 GameObject:
   m_ObjectHideFlags: 0

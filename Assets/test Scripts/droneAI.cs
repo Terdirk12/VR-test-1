@@ -8,7 +8,7 @@ public class droneAI : MonoBehaviour
     private bool playerInVision;
     private Vector3 targetPosition;
     [SerializeField] Transform shootPoint;
-    public Rigidbody projectile , rigidbody;
+    public Rigidbody projectile, rigidbody;
     public AudioSource audioSource;
     public AudioClip audioClip;
     public float bulletSpeed = 45, bulletLife = 25, timer, attackTimer = 0.5f, lookSpeed = 3f, attackDistance = 14, checkForPlayerDistance = 15, volumeScale = 1.5f;

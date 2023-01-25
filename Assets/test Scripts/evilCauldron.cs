@@ -5,9 +5,11 @@ using UnityEngine;
 public class evilCauldron : MonoBehaviour
 {
     public WinMenu winMenu;
+    public playerScript Player;
 
-    public void Start()
-    {
+    void Start()
+    {    
+        Player.playerWon = true;
     }
 
     public void OnCollisionEnter(Collision collision)
